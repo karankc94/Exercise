@@ -6,7 +6,7 @@ namespace ClosetPlamdromeProgram
     class Sudoku
     {
         public const int UNASSIGNED = 0;
-        int row = 0, col = 0;
+      
 
         /*
 * Function: SolveSudoku
@@ -24,7 +24,7 @@ namespace ClosetPlamdromeProgram
 */
         bool SolveSudoku(ref int[,] grid)
         {
-           
+             int row = 0, col = 0;
             if (!FindUnassignedLocation(ref grid, ref row, ref col)) return true; // success!
             for (int num = 1; num <= 9; num++)
             { // consider digits 1 to 9
