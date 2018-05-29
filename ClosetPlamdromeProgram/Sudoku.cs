@@ -3,12 +3,12 @@
 
 namespace ClosetPlamdromeProgram
 {
-    class Sudoku
+   public class Sudoku
     {
 
         const int UNASSIGNED = 0;
 
-        internal bool SolveSudoku(ref int[,] grid)
+        public bool SolveSudoku(ref int[,] grid)
         {
             int row = 0, col = 0;
             if (!FindUnassignedLocation(ref grid, ref row, ref col)) return true; // success!
@@ -73,6 +73,18 @@ namespace ClosetPlamdromeProgram
                 Console.WriteLine("");
             }
 
+        }
+        public void SetValueInGrid(ref int[,] grid, string[] inputStringArray)
+        {
+           
+            for (int i = 0, y = 0; i < grid.GetLength(0) && y < inputStringArray.Length; i++)
+            {
+                for (int j = 0; j < grid.GetLength(1) && y < inputStringArray.Length; j++, y++)
+                {
+                    int.TryParse(inputStringArray[y], out grid[i, j]);
+
+                }
+            }
         }
     }
 
