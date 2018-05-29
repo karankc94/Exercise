@@ -1,19 +1,10 @@
 ﻿using System;
 
 namespace ClosetPlamdromeProgram
-{
-    class Program
-    {
-        //static void Main(string[] args)
-        //{
-           
-
-        //}
-
-    }
+{ 
     public class Palindrome
     {
-        public string ClosestPalindrom(string n)
+        internal string ClosestPalindrom(string n)
         {
             int order = (int)Math.Pow(10, n.Length / 2);
             long original = long.Parse(n);
@@ -34,7 +25,7 @@ namespace ClosetPlamdromeProgram
             return Convert.ToString(Math.Abs(original - smaller) <= Math.Abs(original - larger) ? smaller : larger);
         }
 
-        public long Mirror(long pStr)
+        internal long Mirror(long pStr)
         {
             char[] charArray = pStr.ToString().ToCharArray();
             int start = 0;

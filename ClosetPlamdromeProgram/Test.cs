@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClosetPlamdromeProgram
 {
@@ -47,14 +43,14 @@ namespace ClosetPlamdromeProgram
                 if (sudoku.SolveSudoku(ref grid) == true)
                 {
                     sudoku.DisplayGrid(grid);
-                    
+
                 }
                 else
                 {
                     sudoku.DisplayGrid(grid);
                     Console.WriteLine("No solution exists");
                 }
-                
+
                 Console.ReadLine();
 
             }
