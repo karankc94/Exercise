@@ -22,7 +22,7 @@ namespace ClosetPlamdromeProgram
 * been examined and none worked out, return false to backtrack to previous
 * decision point.
 */
-        bool SolveSudoku(ref int[,] grid)
+      internal  bool SolveSudoku(ref int[,] grid)
         {
             int row = 0, col = 0;
             if (!FindUnassignedLocation(ref grid, ref row, ref col)) return true; // success!
@@ -102,35 +102,7 @@ namespace ClosetPlamdromeProgram
                         return true;
             return false;
         }
-        public static void Main(string[] args)
-        {
-            // 0 means unassigned cells
-            int[,] grid = new int[9, 9]
-                   {{3, 0, 6, 5, 0, 8, 4, 0, 0},
-                    {5, 2, 0, 0, 0, 0, 0, 0, 0},
-                    {0, 8, 7, 0, 0, 0, 0, 3, 1},
-                    {0, 0, 3, 0, 1, 0, 0, 8, 0},
-                    {9, 0, 0, 8, 6, 3, 0, 0, 5},
-                    {0, 5, 0, 0, 9, 0, 6, 0, 0},
-                    {1, 3, 0, 0, 0, 0, 2, 5, 0},
-                    {0, 0, 0, 0, 0, 0, 0, 7, 4},
-                    {0, 0, 5, 2, 0, 6, 3, 0, 0}};
-            Sudoku sudoku = new Sudoku();
-
-            if (sudoku.SolveSudoku(ref grid) == true)
-            {
-                sudoku.DisplayGrid(grid);
-                Console.ReadLine();
-            }
-            else
-            {
-
-                sudoku.DisplayGrid(grid);
-            }
-            Console.WriteLine("No solution exists");
-            Console.ReadLine();
-
-        }
+     
 
         public void DisplayGrid( int[,] grid)
         {

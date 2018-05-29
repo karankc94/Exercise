@@ -6,17 +6,7 @@ namespace ClosetPlamdromeProgram
     {
         //static void Main(string[] args)
         //{
-        //    int i = 1;
-        //    int j = 0;
-        //    string input;
-        //    int.TryParse(Console.ReadLine(), out j);
-        //    do
-        //    {
-        //        input = Console.ReadLine();
-        //        Console.WriteLine(new Palindrome().ClosestPalindrom(input));
-        //        i++;
-        //    } while (i <= j);
-        //    Console.ReadLine();
+           
 
         //}
 
@@ -41,7 +31,7 @@ namespace ClosetPlamdromeProgram
                 smaller = Math.Max(mirrored, smaller);
             }
 
-            return Convert.ToString(original - smaller <= larger - original ? smaller : larger);
+            return Convert.ToString(Math.Abs(original - smaller) <= Math.Abs(original - larger) ? smaller : larger);
         }
 
         public long Mirror(long pStr)
