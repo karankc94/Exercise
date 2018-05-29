@@ -6,7 +6,7 @@ namespace ClosetPlamdromeProgram
     class Sudoku
     {
         public const int UNASSIGNED = 0;
-      
+
 
         /*
 * Function: SolveSudoku
@@ -24,7 +24,7 @@ namespace ClosetPlamdromeProgram
 */
         bool SolveSudoku(ref int[,] grid)
         {
-             int row = 0, col = 0;
+            int row = 0, col = 0;
             if (!FindUnassignedLocation(ref grid, ref row, ref col)) return true; // success!
             for (int num = 1; num <= 9; num++)
             { // consider digits 1 to 9
@@ -115,21 +115,39 @@ namespace ClosetPlamdromeProgram
                     {1, 3, 0, 0, 0, 0, 2, 5, 0},
                     {0, 0, 0, 0, 0, 0, 0, 7, 4},
                     {0, 0, 5, 2, 0, 6, 3, 0, 0}};
+            Sudoku sudoku = new Sudoku();
 
-            if (new Sudoku().SolveSudoku(ref grid) == true)
-                Console.WriteLine(grid);
-            //       printGrid(grid);
+            if (sudoku.SolveSudoku(ref grid) == true)
+            {
+                sudoku.DisplayGrid(grid);
+                Console.ReadLine();
+            }
             else
             {
-                Console.WriteLine(grid);
-                foreach(var item in grid)
-                {
-                    Console.Write(item + " ");
-                }
+
+                sudoku.DisplayGrid(grid);
             }
-         Console.WriteLine("No solution exists");
+            Console.WriteLine("No solution exists");
             Console.ReadLine();
-           
+
+        }
+
+        public void DisplayGrid( int[,] grid)
+        {
+            for(int i = 0; i < grid.GetLength(0); i++)
+            {
+                for(int j = 0; j < grid.GetLength(1); j++)
+                {
+                    Console.Write(grid[i, j] + " ");
+                }
+                Console.WriteLine("");
+                for (int j = 0; j < grid.GetLength(1); j++)
+                {
+                    Console.Write("---");
+                }
+                Console.WriteLine("");
+            }
+
         }
     }
 
