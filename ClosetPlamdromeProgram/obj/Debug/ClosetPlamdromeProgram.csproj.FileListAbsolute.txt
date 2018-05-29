@@ -1,0 +1,6 @@
+E:\karan\Learning\ClosetPlamdromeProgram\ClosetPlamdromeProgram\bin\Debug\ClosetPlamdromeProgram.exe.config
+E:\karan\Learning\ClosetPlamdromeProgram\ClosetPlamdromeProgram\bin\Debug\ClosetPlamdromeProgram.exe
+E:\karan\Learning\ClosetPlamdromeProgram\ClosetPlamdromeProgram\bin\Debug\ClosetPlamdromeProgram.pdb
+E:\karan\Learning\ClosetPlamdromeProgram\ClosetPlamdromeProgram\obj\Debug\ClosetPlamdromeProgram.csprojResolveAssemblyReference.cache
+E:\karan\Learning\ClosetPlamdromeProgram\ClosetPlamdromeProgram\obj\Debug\ClosetPlamdromeProgram.exe
+E:\karan\Learning\ClosetPlamdromeProgram\ClosetPlamdromeProgram\obj\Debug\ClosetPlamdromeProgram.pdb
